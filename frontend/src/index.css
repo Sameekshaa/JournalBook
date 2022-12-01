@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+nav {
+  background-color: #744391;
+}
+
+.note {
+  width: fit-content;
+  max-width: 300px;
+  border: 2px solid #a869cc;
+  background-color: #a869cc;
+  background-color: rgba(0, 0, 0, 0.01);
+  backdrop-filter: blur(10px);
+  opacity: 2;
+  border-radius: 20px;
+  height: fit-content;
+  padding: 15px;
+}
+
+.card {
+  background-color: #a869cc;
+}
+
+.inp-border {
+  padding: 4px;
+  border-bottom: 1px solid rgb(56, 46, 46);
+}
+
+.note-inp {
+  border: 2px solid #873fb1;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-control {
+  border: none;
+}
+
+.nav-text {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  font-weight: 550;
+}
+
+.logout {
+  border: none;
+  background-color: #99b8db;
+}
+
+.editInput {
+  border: 2px solid #e1e2e1;
+}
+
+.nav-name {
+  color: black;
+  margin-left: 2px;
+  font-weight: 500;
+}
+
+.home-card {
+  min-width: 350px;
+  min-height: 400px;
+  padding: 35px;
+}
+
+@media (max-width: 991px) {
+  .test {
+    height: 320px;
+  }
+  .test input {
+    height: 50px;
+  }
+  .test textarea {
+    height: 150px;
+  }
+  .note {
+    font-size: 23px;
+  }
+
+  .note h5 {
+    font-size: 25px;
+  }
+}
+
+.custom-control-label {
+  font-weight: 400;
+}
