@@ -10,7 +10,11 @@ const jwtAuth = require("./middleware/authMiddleware");
 //Tell express to use the json() middleware to process requests
 app.use(express.json());
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["${port}", "https://journalbook.onrender.com"],
+  })
+);
 
 //Import all the necessary functions
 const { login, register, logout } = require("./controller/userController");
@@ -47,5 +51,5 @@ app.get("/", (_, res) => {
 
 //Tell express to listen at specified PORT
 app.listen(port, () => {
-  console.log(`Listening on port http://localhost:${port}`);
+  console.log(`Listening on port: ${port}`);
 });
