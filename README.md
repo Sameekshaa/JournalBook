@@ -21,3 +21,4 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 ## Deployment 
 1. Host your React Frontend on Render - https://journalbook.onrender.com
+2. Host your Node.js backend on Render - https://journalbookservies.onrender.com
