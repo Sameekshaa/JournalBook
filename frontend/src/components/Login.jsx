@@ -16,7 +16,7 @@ const Login = () => {
   //Runs on mount to check if a session is already active
   useEffect(() => {
     if (curr_user) {
-      navigate("https://journalbookservies.onrender.com/notes");
+      navigate("/notes");
       return;
     }
   }, []);
@@ -31,7 +31,7 @@ const Login = () => {
     setLoading(true);
     //Check if a session is active
     if (curr_user) {
-      navigate("https://journalbookservies.onrender.com/notes");
+      navigate("/notes");
     } else {
       //Prevent the default action
       e.preventDefault();
@@ -67,7 +67,7 @@ const Login = () => {
         setCurrUser(user_data);
 
         //Navigate to the notes page
-        navigate("https://journalbookservies.onrender.com/notes");
+        navigate("/notes");
       } else {
         //Get the error message
         const { error } = await data.json();
