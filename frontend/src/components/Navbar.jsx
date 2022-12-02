@@ -47,7 +47,7 @@ const Navbar = () => {
       setCurrUser(null);
 
       //Navigate to the Login page
-      navigate("https://journalbookservies.onrender.com/");
+      navigate("/");
     } else {
       //Get the error message
       const { error } = await data.json();
