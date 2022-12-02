@@ -12,9 +12,9 @@ app.use(express.json());
 
 app.use(
   cors(
-    // {
-    // origin: ["${port}", "https://journalbook.onrender.com"],
-    // }
+    {
+    origin: ["${port}", "https://journalbook.onrender.com"],
+    }
   )
 );
 
