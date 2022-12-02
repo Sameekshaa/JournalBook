@@ -11,9 +11,7 @@ const jwtAuth = require("./middleware/authMiddleware");
 app.use(express.json());
 
 app.use(
-  cors({
-    origin: ["${port}", "https://journalbook.onrender.com"],
-  })
+  cors()
 );
 
 //Import all the necessary functions
