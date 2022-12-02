@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -11,6 +11,12 @@ function App() {
   const [curr_user, setCurrUser] = useState(
     JSON.parse(localStorage.getItem("user"))
   );
+
+  // useEffect(() => {
+  //   fetch("http://localhost:5000")
+  //     .then((res) => res.text())
+  // }, []);
+
 
   const [loading, setLoading] = useState(false);
 
