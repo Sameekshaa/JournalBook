@@ -16,7 +16,7 @@ const Notes = () => {
   //Runs on mount to check if a session is already active
   useEffect(() => {
     //If not logged in then route to login page
-    if (!curr_user) navigate("/");
+    if (!curr_user) navigate("https://journalbookservies.onrender.com/");
     //Else get the notes
     else {
       getNotes();
@@ -67,7 +67,7 @@ const Notes = () => {
         localStorage.clear();
 
         //Route to login page
-        navigate("/");
+        navigate("https://journalbookservies.onrender.com/");
 
         //Setting global state for Alert
         setInfo({ open: true, message: error.info, type: "warning" });
@@ -126,7 +126,7 @@ const Notes = () => {
         localStorage.clear();
 
         //Route to the Login page
-        navigate("/");
+        navigate("https://journalbookservies.onrender.com/");
       }
     }
   };
@@ -178,7 +178,7 @@ const Notes = () => {
         localStorage.clear();
 
         //Route to the Login page
-        navigate("/");
+        navigate("https://journalbookservies.onrender.com/");
       }
     }
   };

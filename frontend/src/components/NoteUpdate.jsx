@@ -83,7 +83,7 @@ const Note = (props) => {
         localStorage.clear();
 
         //Route to the Login page
-        navigate("/");
+        navigate("https://journalbookservies.onrender.com/");
       }
     }
   };

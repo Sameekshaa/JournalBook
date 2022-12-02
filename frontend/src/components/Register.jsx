@@ -56,7 +56,7 @@ const Register = () => {
       setCurrUser(user_data);
 
       //Navigate to the notes page
-      navigate("/notes");
+      navigate("https://journalbookservies.onrender.com/notes");
     } else {
       //Get the error message
       const { error } = await data.json();
