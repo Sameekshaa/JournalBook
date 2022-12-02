@@ -11,11 +11,9 @@ const jwtAuth = require("./middleware/authMiddleware");
 app.use(express.json());
 
 app.use(
-  cors(
-    {
+  cors({
     origin: ["${port}", "https://journalbook.onrender.com"],
-    }
-  )
+  })
 );
 
 //Import all the necessary functions
@@ -29,7 +27,7 @@ const {
 } = require("./controller/notesController");
 
 //Connect with the database
-mongoose.connect(process.env.MONGO_URL, () => { 
+mongoose.connect(process.env.MONGO_URL, () => {
   console.log("Connected to Mongo Successfully!");
 });
 
@@ -46,6 +44,9 @@ app.post("/api/update", jwtAuth, updateNote);
 app.post("/api/delete", jwtAuth, deleteNote);
 
 app.post("/api/logout", jwtAuth, logout);
+
+// Pick up React index.html file
+app.use(express.static(path.join(__dirname, "/frontend/build")));
 
 app.get("/", (_, res) => {
   res.send("API is runnning successfully!!");
