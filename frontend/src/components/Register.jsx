@@ -29,13 +29,16 @@ const Register = () => {
     setLoading(true);
 
     //Make a POST request to /register (backend API) with user's info in the requst body
-    const data = await fetch("/api/register", {
-      method: "post",
-      body: JSON.stringify(user),
-      headers: new Headers({
-        "Content-Type": "application/json",
-      }),
-    });
+    const data = await fetch(
+      "https://journalbookservies.onrender.com/api/register",
+      {
+        method: "post",
+        body: JSON.stringify(user),
+        headers: new Headers({
+          "Content-Type": "application/json",
+        }),
+      }
+    );
 
     setLoading(false);
 

@@ -41,13 +41,16 @@ const Notes = () => {
     setLoading(true);
     if (curr_user) {
       //Make a GET request to /login (backend API) with JWT token in the header
-      const data = await fetch("/api/notes", {
-        method: "get",
-        headers: new Headers({
-          Authorization: "Bearer " + curr_user.token,
-          "Content-Type": "application/json",
-        }),
-      });
+      const data = await fetch(
+        "https://journalbookservies.onrender.com/api/notes",
+        {
+          method: "get",
+          headers: new Headers({
+            Authorization: "Bearer " + curr_user.token,
+            "Content-Type": "application/json",
+          }),
+        }
+      );
 
       setLoading(false);
 
@@ -80,14 +83,17 @@ const Notes = () => {
       e.preventDefault();
 
       //Make a POST request to /notes (backend API) note info in request body and JWT token in header
-      const data = await fetch("/api/notes", {
-        method: "post",
-        headers: new Headers({
-          Authorization: "Bearer " + curr_user.token,
-          "Content-Type": "application/json",
-        }),
-        body: JSON.stringify(note),
-      });
+      const data = await fetch(
+        "https://journalbookservies.onrender.com/api/notes",
+        {
+          method: "post",
+          headers: new Headers({
+            Authorization: "Bearer " + curr_user.token,
+            "Content-Type": "application/json",
+          }),
+          body: JSON.stringify(note),
+        }
+      );
 
       //Check if status is success
       if (data.ok) {
@@ -133,14 +139,17 @@ const Notes = () => {
       e.preventDefault();
 
       // Make a post request to /delete (backend API) with note's info in the requst body and JWT token in the headers
-      const data = await fetch("/api/delete", {
-        method: "post",
-        body: e.target.name,
-        headers: new Headers({
-          Authorization: "Bearer " + curr_user.token,
-          "Content-Type": "application/json",
-        }),
-      });
+      const data = await fetch(
+        "https://journalbookservies.onrender.com/api/delete",
+        {
+          method: "post",
+          body: e.target.name,
+          headers: new Headers({
+            Authorization: "Bearer " + curr_user.token,
+            "Content-Type": "application/json",
+          }),
+        }
+      );
 
       setLoading(false);
 

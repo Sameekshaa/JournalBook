@@ -42,14 +42,17 @@ const Note = (props) => {
       e.preventDefault();
 
       //Make a POST request to /notes (backend API) note info in request body and JWT token in header
-      const data = await fetch("/api/update", {
-        method: "post",
-        headers: new Headers({
-          Authorization: "Bearer " + curr_user.token,
-          "Content-Type": "application/json",
-        }),
-        body: JSON.stringify({ ...note, _id: props.note._id }),
-      });
+      const data = await fetch(
+        "https://journalbookservies.onrender.com/api/update",
+        {
+          method: "post",
+          headers: new Headers({
+            Authorization: "Bearer " + curr_user.token,
+            "Content-Type": "application/json",
+          }),
+          body: JSON.stringify({ ...note, _id: props.note._id }),
+        }
+      );
 
       setLoading(false);
 

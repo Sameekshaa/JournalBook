@@ -15,13 +15,16 @@ const Navbar = () => {
   const logout = async () => {
     setLoading(true);
     //Make a post request to /logout (backend API) with JWT token in header
-    const data = await fetch("/api/logout", {
-      method: "post",
-      headers: new Headers({
-        Authorization: "Bearer " + curr_user.token,
-        "Content-Type": "application/json",
-      }),
-    });
+    const data = await fetch(
+      "https://journalbookservies.onrender.com/api/logout",
+      {
+        method: "post",
+        headers: new Headers({
+          Authorization: "Bearer " + curr_user.token,
+          "Content-Type": "application/json",
+        }),
+      }
+    );
 
     setLoading(false);
 
