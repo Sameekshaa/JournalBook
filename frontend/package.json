@@ -1,5 +1,4 @@
 {
-  "homepage": "https://sameekshaa.github.io/JournalBook/",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
@@ -17,13 +16,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://journalbookservies.onrender.com/",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -35,8 +31,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
   }
 }
